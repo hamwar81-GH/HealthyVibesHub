@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color: #0f172a;
+    background:
+      radial-gradient(circle at top, rgba(220, 252, 231, 0.65), transparent 32%),
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 68%, #f0fdf4 100%);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-mist font-sans text-slate-900 antialiased;
+    background:
+      radial-gradient(circle at top left, rgba(220, 252, 231, 0.85), transparent 24%),
+      radial-gradient(circle at top right, rgba(186, 230, 253, 0.55), transparent 20%),
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 70%, #f0fdf4 100%);
+  }
+
+  a,
+  button,
+  input {
+    @apply transition duration-300 ease-out;
+  }
+
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-label {
+    @apply inline-flex items-center rounded-full border border-brand-100 bg-white/85 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-brand-700 shadow-sm;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl lg:text-5xl;
+  }
+
+  .surface-card {
+    @apply rounded-3xl border border-white/70 bg-white/90 shadow-card backdrop-blur;
+  }
+}
